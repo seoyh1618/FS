@@ -1,0 +1,9 @@
+FLASK_APP=app:create_app
+FLASK_ENV=development
+FLASK_DEBUG= 1
+FLASK_RUN_HOST=0.0.0.0
+FLASK_RUN_PORT=3001
+
+# 세션 쿠키와 관련된 설정
+#SESSION_COOKIE_NAME=yourappsession
+#PERMANENT_SESSION_LIFETIME=86400  # 24시간
