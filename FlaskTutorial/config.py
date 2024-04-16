@@ -34,6 +34,7 @@ class TestingConfig(Config) :
 class DevelopmentConfig(Config) : 
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URI')
+    SECRET_KEY = os.getenv('SECRET_KEY')
     # 개발 환경에 적합한 설정을 여기에 넣습니다.
     
     #SQLALCHEMY_DATABASE_URI = os.getenv('DEV_DATABASE_URL', 'sqlite:///your_dev_db.sqlite')

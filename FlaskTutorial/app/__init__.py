@@ -28,6 +28,9 @@ def register_blueprints(app) :
 def create_app(config_name=None)  :
     app = Flask(__name__)
     
+    import logging 
+    logging.basicConfig(level=logging.DEBUG)
+
     # Config 설정이 None 일 경우 Development 설정 참조 
     if not config_name : 
         app.config.from_object(DevelopmentConfig)
@@ -45,5 +48,6 @@ def create_app(config_name=None)  :
     #ORM Part 
     db.init_app(app)
     migrate.init_app(app, db)
+    from app.models import Question,Answer
 
     return app
